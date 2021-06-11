@@ -36,14 +36,12 @@ export default class Tooltip extends React.Component {
 	}
 
 	mouseOver() {
-		console.log(this.state.hovering)
 		this.setState({
 			hovering: true
 		})
 	}
 
 	mouseOut() {
-		console.log(this.state.hovering)
 		this.setState({
 			hovering: false
 		})
@@ -57,7 +55,7 @@ export default class Tooltip extends React.Component {
 			<div
 				onMouseOver={this.mouseOver}
 				onMouseOut={this.mouseOut}
-				styles={styles.container}
+				style={styles.container}
 			>
 				{hovering === true && <div style={styles.tooltip}>
 					{text}

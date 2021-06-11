@@ -116,13 +116,13 @@ export default class Results extends React.Component {
 					>
 						<ProfileList profile={loser.profile} />
 					</Card>
-					<button
-						className='btn dark-btn btn-space'
-						onClick={this.props.onReset}
-					>
-						Restart
-					</button>
 				</div>
+				<button
+					className='btn dark-btn btn-space'
+					onClick={this.props.onReset}
+				>
+					Restart
+				</button>
 			</React.Fragment>
 		)
 	}

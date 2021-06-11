@@ -5,6 +5,7 @@ import { fetchPopularRepos } from '../utils/api'
 // function, so we used our name imports here to grab that.
 import Card from './Card.js'
 import Loading from './Loading.js'
+import Tooltip from './Tooltip'
 import { FaUser, FaStar, FaCodeBranch, FaExclamationTriangle } from 'react-icons/fa'
 
 function LanguagesNav({selected, onUpdateLanguage}) {
@@ -48,10 +49,12 @@ function ReposGrid({ repos }) {
 						>
 							<ul className='card-list'>
 								<li>
-									<FaUser color='rgb(255, 191, 166)' size={22}/>
-									<a href={`https://github.com/${login}`}>
-										{login}
-									</a>
+									<Tooltip text='Github Username'>
+										<FaUser color='rgb(255, 191, 166)' size={22}/>
+										<a href={`https://github.com/${login}`}>
+											{login}
+										</a>
+									</Tooltip>
 								</li>
 								<li>
 									<FaStar color='rgb(255, 215, 0)' size={22}/>
